@@ -4,7 +4,6 @@ services:
     name: cogworks-api
     runtime: node
     env: node
-    region: oregon
     plan: free
     buildCommand: cd server && npm install
     startCommand: cd server && npm start
