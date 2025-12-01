@@ -25,7 +25,6 @@ services:
     name: cogworks-client
     runtime: static
     env: static
-    region: oregon
     plan: free
     buildCommand: cd client && npm install && npm run build
     staticPublishPath: ./client/dist
