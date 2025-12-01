@@ -1,11 +1,7 @@
 services:
-  # Backend API Server
   - type: web
     name: cogworks-api
-    runtime: node
     env: node
-    region: oregon
-    plan: free
     buildCommand: cd server && npm install
     startCommand: cd server && npm start
     envVars:
@@ -16,27 +12,20 @@ services:
           name: cogworks-db
           property: connectionString
       - key: CLIENT_URL
-        value: https://cogworks-client.onrender.com
+        sync: false
       - key: JWT_SECRET
         generateValue: true
-    healthCheckPath: /api/health
 
-  # Frontend Client
   - type: web
     name: cogworks-client
-    runtime: static
     env: static
-    region: oregon
-    plan: free
     buildCommand: cd client && npm install && npm run build
     staticPublishPath: ./client/dist
     envVars:
       - key: VITE_API_URL
-        value: https://cogworks-api.onrender.com/api
+        sync: false
 
 databases:
   - name: cogworks-db
     databaseName: cogworks
     user: cogworks
-    plan: free
-    region: oregon
