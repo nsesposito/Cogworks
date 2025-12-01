@@ -1,0 +1,91 @@
+.settings-container {
+    width: 100%;
+}
+
+.settings-container h2 {
+    margin-bottom: 2rem;
+}
+
+.settings-section {
+    background: rgba(0, 255, 0, 0.03);
+    border: 1px solid var(--terminal-green-dim);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.settings-section h3 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.settings-form {
+    max-width: 500px;
+}
+
+.settings-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.settings-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--terminal-green);
+    font-size: 0.9rem;
+}
+
+.settings-form input {
+    width: 100%;
+    background: var(--terminal-bg);
+    border: 1px solid var(--terminal-green-dim);
+    color: var(--terminal-green);
+    padding: 0.75rem;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.95rem;
+}
+
+.settings-form input:focus {
+    outline: none;
+    border-color: var(--terminal-green);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
+}
+
+.btn-submit {
+    background: var(--terminal-green);
+    color: var(--terminal-bg);
+    border: 2px solid var(--terminal-green);
+    padding: 0.75rem 2rem;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 1rem;
+}
+
+.btn-submit:hover:not(:disabled) {
+    background: transparent;
+    color: var(--terminal-green);
+}
+
+.btn-submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.error {
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid #ff0000;
+    color: #ff0000;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.success {
+    background: rgba(0, 255, 0, 0.1);
+    border: 1px solid var(--terminal-green);
+    color: var(--terminal-green);
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    font-family: 'Share Tech Mono', monospace;
+}
